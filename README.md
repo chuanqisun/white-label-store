@@ -1,2 +1,2 @@
 # white-label-store
-A e-commerce website without any branding for prototyping and user studies
+An e-commerce website without any branding for prototyping and user studies

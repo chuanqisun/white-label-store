@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang=en>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    .buy-box {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+      gap: 16px;
+    }
+
+    @media (max-width: 640px) {
+      .buy-box {
+        grid-template-columns: 100%;
+      }
+    } 
+
+    .album {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+      grid-template-rows: auto auto;
+    }
+
+    @media (max-width: 480px) {
+      .album {
+        grid-template-columns: repeat(auto-fit, minmax(42px, 1fr));
+      }
+    } 
+
+    .album__small {
+      grid-row: 2 / -1;
+    }
+
+    .album__large {
+      grid-row: 1 / span 1;
+      grid-column: 1 / -1;
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+    }
+
+    .product-details {
+      grid-column: 1 / -1;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .dimension-option-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .dimension-option {
+      width: 48px;
+      height: 48px;
+      margin-right: 8px;
+    }
+
+    .more-products {
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header class="clamper-grid">
+    <div class="promo-bar safe-bleed">Promotional message | Promotional message | Promotional message</div>
+    <div class="toolbar">
+      <input type="search"/>
+      <button class="button--icon-only"><img src="../assets/placeholder.svg"></button>
+      <button class="button--icon-only"><img src="../assets/placeholder.svg"></button>
+    </div>
+    <div class="header-stack">
+      <a href="home.html"><img class="logo" style="width: 200px; height: 80px;" src="../assets/placeholder.svg"></a>
+      <nav>
+        <ul>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="bread-crumb">
+        <a href="home.html">Home</a> / <a href="gallery.html">Category</a> / <a href="product.html">Product</a>
+      </div>
+  </header>
+  <main class="clamper-grid">
+    <div class="buy-box">
+      <div class="album">
+        <img class="album__small" src="../assets/placeholder.svg">
+        <img class="album__small" src="../assets/placeholder.svg">
+        <img class="album__small" src="../assets/placeholder.svg">
+        <img class="album__small" src="../assets/placeholder.svg">
+        <img class="album__small" src="../assets/placeholder.svg">
+        <img class="album__large" src="../assets/placeholder.svg">
+      </div>
+      <div class="product-info">
+        <h1>Product name</h1>
+        <div class="product-by-line">
+          <div>$49.99</div><div>SKU #88888888</div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <section>
+          <h2>Dimension</h2>
+          <ul class="dimension-option-list">
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Dimension</h2>
+          <ul class="dimension-option-list">
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+            <li><img class="dimension-option" src="../assets/placeholder.svg"></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Dimension</h2>
+          <a href="#" class="link--cta">Add to bag</a>
+        </section>
+      </div>
+      <div class="product-details">
+        <section>
+          <h2>Feature area</h2>
+          <ul>
+            <li>Feature description</li>
+            <li>Feature description</li>
+            <li>Feature description</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Feature area</h2>
+          <ul>
+            <li>Feature description</li>
+            <li>Feature description</li>
+            <li>Feature description</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Feature area</h2>
+          <ul>
+            <li>Feature description</li>
+            <li>Feature description</li>
+            <li>Feature description</li>
+          </ul>
+        </section>
+      </div>
+      <section class="more-products">
+          <h2>Section</h2>
+          <div class="carousel">
+            loading...
+            <button class="carousel__next">More ▸</button>
+          </div>
+        </section>
+    </div>
+
+  </main>
+  <footer class="clamper-grid">
+    <div class="sitemap">
+      <section>
+        <h1>Sitemap area</h1>
+        <ul>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Sitemap area</h1>
+        <ul>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Sitemap area</h1>
+        <ul>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+        </ul>
+      </section>
+      <section>
+        <h1>Sitemap area</h1>
+        <ul>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+          <li><a href="#">Sitemap Item</a></li>
+        </ul>
+      </section>
+    </div>
+    <small class="fine-print"> © Your company name 2019</small>
+  </footer>
+  <script>
+      const carouselItems = new Array(5).fill(0);
+      const carouselHtml = carouselItems.map(item => `
+        <a href="product.html" class="carousel__item">
+          <img src="../assets/placeholder.svg">
+          <div>Item name</div>
+          <div>$49.99</div>
+        </a>
+      `.trim()).join('').concat(`
+        <button class="carousel__next">More ▸</button>
+      `.trim());
+  
+      document.querySelector('.carousel').innerHTML = carouselHtml; 
+  </script>
+</body>
+</html>

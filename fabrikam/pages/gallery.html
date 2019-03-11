@@ -4,129 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  </head>
+  <link rel="stylesheet" type="text/css" href="style.css">
   <style>
-    :root {
-      --system-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-      --white: #FFF;
-      --grey-light: #949494;
-      --grey-dark: #2D2D2D;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--system-font-family);
-      box-sizing: border-box;
-      color: var(--grey-dark);
-    }
-
-    * {
-      box-sizing: inherit;
-    }
-
-    .clamper-grid {
-      display: grid;
-      grid-template-columns: 1fr minmax(0, 1080px) 1fr;
-      column-gap: 16px;
-    }
-
-    .clamper-grid > * {
-      grid-column: 2 / -2;
-    }
-
-    .clamper-grid > .safe-bleed {
-      padding: 0 16px;
-      grid-column: 1 / -1;
-    }
-
-    .link--cta {
-      text-decoration: none;
-      text-transform: uppercase;
-      color: var(--white);
-      background-color: var(--grey-dark);
-      border: 1px sold var(--grey-dark);
-      padding: 8px 16px;
-    }
-
-    .button--icon-only {
-      background: none;
-      border: none;
-      padding: 0;
-      font-size: 0;
-    }
-
-    .button--icon-only > img {
-      border-radius: 50%;
-      width: 32px;
-      height: 32px;
-    }
-
-    input[type="search"] {
-      border: 1px solid var(--grey-light);
-      height: 32px;
-      font-family: inherit;
-      padding-left: 4px;
-      width: 240px;
-    }
-
-    input[type="search"]:focus {
-      border-color: var(--grey-dark);
-    }
-
-    /* header */
-    header {
-      row-gap: 8px;
-    }
-
-    .toolbar {
-      display: grid;
-      grid-auto-flow: column;
-      justify-content: end;
-      grid-gap: 0 8px;
-    }
-
-    .header-stack {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .promo-bar {
-      font-size: 14px;
-      text-align: center;
-      text-transform: uppercase;
-      background-color: var(--grey-dark);
-      color: var(--white);
-    }
-
-    .logo {
-      grid-column: span 1;
-    }
-
-    nav > ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      flex-wrap: wrap;
-    }
-
-    nav li {
-      margin: 4px 12px;
-    }
-
-    nav a {
-      color: var(--grey-dark);
-      text-decoration: none;
-      display: block;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-
-    /* main */
-    main {
-      row-gap: 32px;
-    }
-
     .layout-30-70 {
       display: grid;
       grid-template-columns: 3fr 7fr;
@@ -146,32 +25,8 @@
       padding: 0;
       grid-gap: 16px;
     }
-
-    /* footer */
-    .sitemap {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
-    }
-
-    .sitemap ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .sitemap a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .sitemap a:hover {
-      text-decoration: underline;
-    }
-
-    .fine-print {
-      text-align: center;
-      margin: 16px 0;
-    }
   </style>
+</head>
 <body>
   <header class="clamper-grid">
     <div class="promo-bar safe-bleed">Promotional message | Promotional message | Promotional message</div>
@@ -181,15 +36,18 @@
       <button class="button--icon-only"><img src="../assets/placeholder.svg"></button>
     </div>
     <div class="header-stack">
-      <a href="./home.html"><img class="logo" style="width: 200px; height: 80px;" src="../assets/placeholder.svg"></a>
+      <a href="home.html"><img class="logo" style="width: 200px; height: 80px;" src="../assets/placeholder.svg"></a>
       <nav>
         <ul>
-          <li><a href="./gallery.html">Category</a></li>
-          <li><a href="./gallery.html">Category</a></li>
-          <li><a href="./gallery.html">Category</a></li>
-          <li><a href="./gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
+          <li><a href="gallery.html">Category</a></li>
         </ul>
       </nav>
+    </div>
+    <div class="bread-crumb">
+      <a href="home.html">Home</a> / <a href="gallery.html">Category</a>
     </div>
   </header>
   <main class="clamper-grid">
@@ -220,41 +78,41 @@
   <footer class="clamper-grid">
     <div class="sitemap">
       <section>
-        <h1>Section</h1>
-        <ul>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-        </ul>
-      </section>
-      <section>
-        <h1>Section</h1>
-        <ul>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-        </ul>
-      </section>
-      <section>
-        <h1>Section</h1>
-        <ul>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-        </ul>
-      </section>
-      <section>
-        <h1>Section</h1>
-        <ul>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-          <li><a href="#">Item</a></li>
-        </ul>
-      </section>
+          <h1>Sitemap area</h1>
+          <ul>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Sitemap area</h1>
+          <ul>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Sitemap area</h1>
+          <ul>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+          </ul>
+        </section>
+        <section>
+          <h1>Sitemap area</h1>
+          <ul>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+            <li><a href="#">Sitemap Item</a></li>
+          </ul>
+        </section>
     </div>
     <small class="fine-print"> © Your company name 2019</small>
   </footer>
@@ -265,9 +123,11 @@
     function getGalleryHtml(items) {
       return items.map(item => `
       <li class="gallery-grid__item">
-        <img class="product-image" style="width: 100%" src="../assets/placeholder.svg">
-        <div>Item name</div>
-        <div>$49.99</div>
+        <a class="gallery-grid-item-link" href="product.html">
+          <img class="product-image" style="width: 100%" src="../assets/placeholder.svg">
+          <div>Item name</div>
+          <div>$49.99</div>
+        </a>
       </li>`.trim()).join('');
     }
 

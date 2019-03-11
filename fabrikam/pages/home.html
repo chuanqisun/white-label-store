@@ -6,12 +6,6 @@
   <title>Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
-    .layout-50-50 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      grid-gap: 16px;
-    }
-
     .poster {
       display: grid;
       grid-template-rows: 1fr 1fr 1fr;
@@ -50,7 +44,7 @@
     </div>
   </header>
   <main class="clamper-grid">
-    <div class="layout-100">
+    <div>
       <div class="poster">
         <img class="poster__media" style="width: 100%; height: 480px;" src="../assets/placeholder.svg">
         <div class="poster__cta">
@@ -119,7 +113,7 @@
           </ul>
         </section>
     </div>
-    <small class="fine-print"> © Your company name 2019</small>
+    <small class="fine-print">Copyright © Your Company Name 2019</small>
   </footer>
   <script>
       const carouselItems = new Array(5).fill(0);

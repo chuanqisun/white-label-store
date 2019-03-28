@@ -1,9 +1,27 @@
 class StarsDisplay extends HTMLElement {
+  static get observedAttributes() {
+    return ['star-count'];
+  }
+
   constructor() {
     super();
 
     this.attachShadow({mode: 'open'});
+    this.revealPercent = 100;
   }
+
+  attributeChangedCallback(name, _oldValue, newValue) {
+    if (name === 'star-count') {
+      const newValueNum = parseFloat(newValue);
+      const revealPercent = Math.round((newValueNum/5) * 100);
+      this.revealPercent = revealPercent;
+
+      if (this.shadowRoot.styleSheets.length) {
+        this.shadowRoot.styleSheets[0].cssRules[0].style.setProperty('--reveal', `${this.revealPercent}%`);
+      }
+    }
+  }
+
   connectedCallback() {
     this.shadowRoot.innerHTML = `
     <style>
@@ -11,9 +29,13 @@ class StarsDisplay extends HTMLElement {
         display: inline-block;
         --fill: currentColor;
         --stroke: currentColor;
+        --reveal: 100%;
       }
       .stars {
-        display: flex;
+        display: inline-flex;
+        -webkit-clip-path: polygon(0 0, var(--reveal) 0, var(--reveal) 100%, 0% 100%);
+        clip-path: polygon(0 0, var(--reveal) 0, var(--reveal) 100%, 0% 100%);
+        transition: all 250ms;
       }
     </style>
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -28,6 +50,9 @@ class StarsDisplay extends HTMLElement {
       <svg width="16" height="16"><use xlink:href="#star"></svg>
       <svg width="16" height="16"><use xlink:href="#star"></svg>
     </div>`;
+
+    this.shadowRoot.styleSheets[0].cssRules[0].style.setProperty('--reveal', `${this.revealPercent}%`);
+
   }
 }
 

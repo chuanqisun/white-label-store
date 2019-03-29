@@ -13,6 +13,7 @@ class StarsDisplay extends HTMLElement {
     return `
     <style>
       :host {
+        font-size: 0;
         display: inline-block;
         --fill: currentColor;
         --stroke: currentColor;
@@ -45,6 +46,7 @@ class StarsDisplay extends HTMLElement {
     return `
     <style>
       :host {
+        font-size: 0;
         display: inline-block;
         --fill: currentColor;
         --stroke: currentColor;
@@ -136,4 +138,4 @@ class StarsDisplay extends HTMLElement {
   }
 }
 
-customElements.define('stars-display', StarsDisplay);
+customElements.define('x-stars-display', StarsDisplay);

@@ -1,0 +1,1 @@
+export const fontSizeExpo = (i) => `${Math.pow((5/4), i)}rem`;

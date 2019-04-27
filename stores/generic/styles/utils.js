@@ -1,6 +1,6 @@
-import { sizeStatic } from './spacing';
+import { space } from './space';
 
 export const pageClamp = `
-max-width: ${sizeStatic.maxClampedWidth};
-margin: auto;
+  max-width: ${space.static.maxClampedWidth};
+  margin: auto;
 `.trim();

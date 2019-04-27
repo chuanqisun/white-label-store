@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { pageClamp, fontSizeExpo, sizeLinear } from '../../styles';
+import { font, space } from '../../styles';
 
 export function Footer() {
   return (
@@ -35,16 +35,14 @@ export function Footer() {
 }
 
 const StyledFooter = styled.footer`
-  ${pageClamp}
-
   display: flex;
   justify-content: center;
 
   .column {
-    margin: 0 ${sizeLinear(8)};
+    margin: 0 ${space.scale(8)};
   }
 
   .list-title {
-    font-size: ${fontSizeExpo(2)};
+    font-size: ${font.size.scale(2)};
   }
 `;

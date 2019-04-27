@@ -5,14 +5,18 @@ import { PromoBar } from '../components/promo-bar/promo-bar';
 import { Header } from '../components/header/header';
 import { Hero } from '../components/hero/hero';
 import { Footer } from '../components/footer/footer';
+import { withPageClamp, withPagePadding } from '../components/layout';
+
+const HeaderOnPage = withPageClamp(withPagePadding(Header));
+const FooterOnPage = withPageClamp(withPagePadding(Footer));
 
 function AppRoot() {
   return (
     <>
       <PromoBar />
-      <Header />
+      <HeaderOnPage />
       <Hero />
-      <Footer />
+      <FooterOnPage />
     </>
   );
 }

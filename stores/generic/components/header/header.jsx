@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { pageClamp, sizeStatic } from '../../styles';
+import { space } from '../../styles';
 import Logo from '../../assets/images/Logo.svg';
 
 export function Header() {
@@ -25,10 +25,7 @@ export function Header() {
 }
 
 const StyledHeader = styled.header`
-  ${pageClamp}
-
   position: relative;
-  padding: 0 ${sizeStatic.pageSidePadding};
 
   .logo {
     max-height: 80px;

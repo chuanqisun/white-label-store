@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { fontSizeExpo, background, sizeLinear } from '../../styles';
+import { font, background, space } from '../../styles';
 
 export function PromoBar() {
   return <StyledDiv>Promotional message</StyledDiv>;
 }
 
 const StyledDiv = styled.div`
-  padding: ${sizeLinear(1)} ${sizeLinear(4)};
+  padding: ${space.scale(1)} ${space.scale(4)};
   background-color: ${background.black._};
   color: ${background.black.white};
-  font-size: ${fontSizeExpo(0)};
+  font-size: ${font.size.scale(0)};
   text-align: center;
 `;

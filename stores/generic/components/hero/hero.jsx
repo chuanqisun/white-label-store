@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { pageClamp, sizeStatic } from '../../styles';
 import HeroImage from '../../assets/images/Hero.svg';
 
 export function Hero() {

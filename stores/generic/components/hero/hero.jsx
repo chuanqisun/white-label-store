@@ -16,11 +16,15 @@ export function Hero() {
 }
 
 const StyledDiv = styled.div`
+  --min-height: 20rem;
+  --max-height: calc(100vh - 10rem); /* TODO, need header height to calculate offset */
+
   position: relative;
 
   .background-image {
     width: 100%;
-    max-height: calc(100vh - 10rem);
+    min-height: var(--min-height);
+    max-height: var(--max-height);
     object-fit: cover;
   }
 

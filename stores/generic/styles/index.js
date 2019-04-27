@@ -1,4 +1,4 @@
 export * from './color';
-export * from './typography';
+export * from './font';
 export * from './space';
 export * from './utils';

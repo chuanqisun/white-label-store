@@ -6,9 +6,9 @@ import { Grid } from '../layout';
 
 const mockCollection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
-export function Collection() {
+export function ProductGrid() {
   return (
-    <ProductGrid>
+    <StyledGrid>
       {mockCollection.map(item => (
         <li key={item}>
           <img className="product-image" src={ProductImage} />
@@ -16,11 +16,11 @@ export function Collection() {
           <div>$99.00</div>
         </li>
       ))}
-    </ProductGrid>
+    </StyledGrid>
   );
 }
 
-const ProductGrid = styled(Grid)`
+const StyledGrid = styled(Grid)`
   .product-image {
     width: 100%;
   }

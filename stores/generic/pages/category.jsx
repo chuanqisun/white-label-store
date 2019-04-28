@@ -4,19 +4,19 @@ import ReactDOM from 'react-dom';
 import { PromoBar } from '../components/promo-bar/promo-bar';
 import { Header } from '../components/header/header';
 import { Footer } from '../components/footer/footer';
-import { Collection } from '../components/collection/collection';
+import { ProductGrid } from '../components/product-grid/product-grid';
 import { withPageClamp, withPagePadding } from '../components/layout';
 
 const HeaderOnPage = withPageClamp(withPagePadding(Header));
 const FooterOnPage = withPageClamp(withPagePadding(Footer));
-const CollectionOnPage = withPageClamp(withPagePadding(Collection));
+const ProductGridOnPage = withPageClamp(withPagePadding(ProductGrid));
 
 function AppRoot() {
   return (
     <>
       <PromoBar />
       <HeaderOnPage />
-      <CollectionOnPage />
+      <ProductGridOnPage />
       <FooterOnPage />
     </>
   );

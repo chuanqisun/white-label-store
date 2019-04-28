@@ -10,8 +10,8 @@ export function ProductGrid() {
   return (
     <StyledGrid>
       {mockCollection.map(item => (
-        <a href="./product.html">
-          <li key={item}>
+        <a key={item} href="./product.html">
+          <li>
             <img className="product-image" src={ProductImage} />
             <div>Product name</div>
             <div>$99.00</div>

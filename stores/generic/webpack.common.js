@@ -3,10 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const pages = [
-  { bundleName: 'home', entry: './pages/home.jsx', template: './templates/default.html' },
-  { bundleName: 'category', entry: './pages/category.jsx', template: './templates/default.html' },
-  { bundleName: 'product', entry: './pages/product.jsx', template: './templates/default.html' },
   { bundleName: 'cart', entry: './pages/cart.jsx', template: './templates/default.html' },
+  { bundleName: 'category', entry: './pages/category.jsx', template: './templates/default.html' },
+  { bundleName: 'checkout', entry: './pages/checkout.jsx', template: './templates/default.html' },
+  { bundleName: 'home', entry: './pages/home.jsx', template: './templates/default.html' },
+  { bundleName: 'product', entry: './pages/product.jsx', template: './templates/default.html' },
 ];
 
 const pageEntries = pages.reduce((obj, page) => {

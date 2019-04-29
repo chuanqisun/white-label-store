@@ -52,7 +52,7 @@ export function CartDetails() {
         </tbody>
       </StyledTable>
       <StyledDiv>
-        <button>Checkout</button>
+        <a href="./checkout.html">Checkout</a>
         <button>Continue shopping</button>
       </StyledDiv>
     </>

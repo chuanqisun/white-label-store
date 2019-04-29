@@ -13,7 +13,7 @@ export function Header() {
       <div className="toolbox">
         <button>Search</button>
         <a href="#">Sign in</a>
-        <a href="#">Bag</a>
+        <a href="./cart.html">Bag</a>
       </div>
       <nav className="global-nav">
         <a href="./category.html">Category 1</a>

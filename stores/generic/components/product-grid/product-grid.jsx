@@ -1,14 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import ProductImage from '../../assets/images/Product.svg';
-
-import { Grid } from '../layout';
+import { space } from '../../styles';
 
 const mockCollection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 export function ProductGrid() {
   return (
-    <StyledGrid>
+    <StyledList>
       {mockCollection.map(item => (
         <a key={item} href="./product.html">
           <li>
@@ -18,11 +17,22 @@ export function ProductGrid() {
           </li>
         </a>
       ))}
-    </StyledGrid>
+    </StyledList>
   );
 }
 
-const StyledGrid = styled(Grid)`
+const StyledList = styled.ul`
+  --card-min-width: ${space.scale(60)};
+  --grid-gap: ${space.scale(5)};
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(var(--card-min-width), 1fr));
+  grid-gap: var(--grid-gap);
+
   .product-image {
     width: 100%;
   }

@@ -5,7 +5,7 @@ import { PromoBar } from '../components/promo-bar/promo-bar';
 import { Header } from '../components/header/header';
 import { Footer } from '../components/footer/footer';
 import { ProductGrid } from '../components/product-grid/product-grid';
-import { withPageClamp, withPagePadding } from '../components/layout';
+import { withPageClamp, withPagePadding } from '../components/layouts';
 import { GlobalStyle } from '../styles';
 
 const HeaderOnPage = withPageClamp(withPagePadding(Header));

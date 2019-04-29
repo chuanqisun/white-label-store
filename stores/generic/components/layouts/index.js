@@ -1,3 +1,3 @@
-export * from './with-one-to-one';
+export * from './with-equal-distribute';
 export * from './with-page-clamp';
 export * from './with-page-padding';

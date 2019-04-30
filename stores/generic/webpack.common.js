@@ -8,6 +8,8 @@ const pages = [
   { bundleName: 'checkout', entry: './pages/checkout.jsx', template: './templates/default.html' },
   { bundleName: 'home', entry: './pages/home.jsx', template: './templates/default.html' },
   { bundleName: 'product', entry: './pages/product.jsx', template: './templates/default.html' },
+  { bundleName: 'style-guide', entry: './pages/style-guide.jsx', template: './templates/default.html' },
+  { bundleName: 'embed-host', entry: './pages/embed-host.jsx', template: './templates/default.html' },
 ];
 
 const pageEntries = pages.reduce((obj, page) => {

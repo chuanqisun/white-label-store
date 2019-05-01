@@ -1,7 +1,32 @@
 import React, { useEffect, useRef, lazy } from 'react';
 import ReactDOM from 'react-dom';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { GlobalStyle } from '../styles';
+
+const StyleGuideGlobalStyle = createGlobalStyle`
+  html,body,#app {
+    height: 100%;
+  }
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  height: 100%;
+
+  .table-of-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .demo-iframe {
+    width: 100%;
+  }
+`;
 
 export const hashToComponentMap = {
   '#product-grid': {
@@ -30,17 +55,18 @@ function AppRoot() {
   }, []);
 
   return (
-    <>
+    <StyledDiv>
       <GlobalStyle />
-      <ul>
+      <StyleGuideGlobalStyle />
+      <ul className="table-of-content">
         {Object.entries(hashToComponentMap).map(([key, value]) => (
           <a key={key} href={key}>
             {value.name}
           </a>
         ))}
       </ul>
-      <iframe src={`./embed-host.html${location.hash}`} ref={iframeRef} />
-    </>
+      <iframe className="demo-iframe" frameBorder={0} src={`./embed-host.html${location.hash}`} ref={iframeRef} />
+    </StyledDiv>
   );
 }
 

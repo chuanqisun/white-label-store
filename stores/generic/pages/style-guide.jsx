@@ -4,31 +4,11 @@ import styled, { createGlobalStyle } from 'styled-components';
 
 import { GlobalStyle } from '../styles';
 
-const StyleGuideGlobalStyle = createGlobalStyle`
-  html,body,#app {
-    height: 100%;
-  }
-`;
-
-const StyledDiv = styled.div`
-  display: flex;
-  height: 100%;
-
-  .table-of-content {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    width: 10rem;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-  }
-
-  .demo-iframe {
-    width: 100%;
-  }
-`;
-
 export const hashToComponentMap = {
+  '#carousel': {
+    name: 'Carousel',
+    component: lazy(() => import('../components/carousel/carousel.demo')),
+  },
   '#product-grid': {
     name: 'Product grid',
     component: lazy(() => import('../components/product-grid/product-grid.demo')),
@@ -69,6 +49,30 @@ function AppRoot() {
     </StyledDiv>
   );
 }
+
+const StyleGuideGlobalStyle = createGlobalStyle`
+  html,body,#app {
+    height: 100%;
+  }
+`;
+
+const StyledDiv = styled.div`
+  display: flex;
+  height: 100%;
+
+  .table-of-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 10rem;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .demo-iframe {
+    width: 100%;
+  }
+`;
 
 var mountNode = document.getElementById('app');
 ReactDOM.render(<AppRoot />, mountNode);
